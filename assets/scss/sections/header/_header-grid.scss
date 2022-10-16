@@ -1,0 +1,71 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+
+.header-grid {
+
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    gap: 60px;
+
+    &__logo {}
+
+    &__link {}
+
+    &__image {}
+
+}
+
+.header-nav {
+
+
+    &__list {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__item {}
+
+    &__link {
+        display: flex;
+        gap: 8px;
+        
+    }
+
+    &__picture {}
+
+    &__image {}
+
+}
+
+.actions {
+    display: flex;
+    gap: 40px;
+
+    &-location {
+ display: flex;
+            gap: 8px;
+       
+
+        &__picture {}
+
+        &__image {}
+
+        &__select {}
+    }
+
+    &-tel {
+        &__link {}
+    }
+
+    &-enter {
+
+        &__link {}
+
+        &__picture {}
+
+        &__image {}
+
+        &__text {}
+    }
+}
