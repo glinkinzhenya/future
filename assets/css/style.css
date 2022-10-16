@@ -285,6 +285,9 @@ ul
 
     grid-template-columns: auto 1fr 1fr;
     gap: 60px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 .header-nav__list
 {
@@ -292,7 +295,7 @@ ul
     display: -ms-flexbox;
     display: flex;
 
-    gap: 40px;
+    gap: 20px;
 }
 .header-nav__link
 {
@@ -300,6 +303,11 @@ ul
     display: -ms-flexbox;
     display: flex;
 
+    min-width: 100px;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     gap: 8px;
 }
 .actions
@@ -309,8 +317,24 @@ ul
     display: flex;
 
     gap: 40px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 .actions-location
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    gap: 8px;
+}
+.actions-location__select
+{
+    border: none;
+    border-bottom: 1px solid black;
+}
+.actions-enter__link
 {
     display: -webkit-box;
     display: -ms-flexbox;

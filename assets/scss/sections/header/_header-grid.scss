@@ -7,6 +7,7 @@
     display: grid;
     grid-template-columns: auto 1fr 1fr;
     gap: 60px;
+    align-items: center;
 
     &__logo {}
 
@@ -21,15 +22,17 @@
 
     &__list {
         display: flex;
-        gap: 40px;
+        gap: 20px;
     }
 
     &__item {}
 
     &__link {
         display: flex;
+        justify-content: space-between;
         gap: 8px;
-        
+        min-width: 100px;
+
     }
 
     &__picture {}
@@ -41,17 +44,21 @@
 .actions {
     display: flex;
     gap: 40px;
+    justify-content: space-between;
 
     &-location {
- display: flex;
-            gap: 8px;
-       
+        display: flex;
+        gap: 8px;
+
 
         &__picture {}
 
         &__image {}
 
-        &__select {}
+        &__select {
+            border-bottom: 1px solid black;
+            border: none;
+        }
     }
 
     &-tel {
@@ -60,7 +67,10 @@
 
     &-enter {
 
-        &__link {}
+        &__link {
+            display: flex;
+            gap: 8px;
+        }
 
         &__picture {}
 
