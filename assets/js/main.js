@@ -1,4 +1,4 @@
-$('.navbar-hamburger').click(function () {
+$('.header-navbar__btn').click(function () {
   $(this).toggleClass('open');
   // $('.navbar__list').toggleClass('open');
 
