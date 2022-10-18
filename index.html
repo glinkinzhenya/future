@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Furute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -29,7 +32,7 @@
                 <img class="header-nav__image" src="assets/img/header-nav__image.svg" alt="#">
               </div>
 
-              <div>Все курсы</div>
+              <div class="header-nav__text">Все курсы</div>
 
             </a>
           </li>
@@ -57,22 +60,39 @@
             <img class="actions-location__image" src="assets/img/actions-location__image.svg" alt="#">
           </div>
 
-          <select class="actions-location__select">
-            <option selected>Киев</option>
-            <option value="1">Одесса</option>
-            <option value="2">Харьков</option>
-            <option value="3">Запорожье</option>
-          </select>
+          <div class="actions-location__text">Киев</div>
 
           <ul class="actions-location__burger navbar__list">
             <li class="actions-location__burger-item">
-              <a class="actions-location__burger-link" href="#">Одесса</a>
+              <a class="actions-location__burger-link" href="#">
+                <div class="actions-location__burger-picture">
+                  <img class="actions-location__burger-image" src="assets/img/actions-location__burger-image.svg" alt="#">
+                </div>
+                <div class="actions-location__burger-text">Одесса</div></a>
             </li>
             <li class="actions-location__burger-item">
-              <a class="actions-location__burger-link" href="#">Харьков</a>
+              <a class="actions-location__burger-link" href="#">
+                <div class="actions-location__burger-picture">
+                  <img class="actions-location__burger-image" src="assets/img/actions-location__burger-image.svg"
+                    alt="#">
+                </div>
+                <div class="actions-location__burger-text">Харьков</div>
+              </a>
             </li>
             <li class="actions-location__burger-item">
-              <a class="actions-location__burger-link" href="#">Запорожье</a>
+              <a class="actions-location__burger-link" href="#">
+                <div class="actions-location__burger-picture">
+                  <img class="actions-location__burger-image" src="assets/img/actions-location__burger-image.svg"
+                    alt="#">
+                </div>
+                <div class="actions-location__burger-text">Запорожье</div>
+              </a>
+            </li>
+            <li class="actions-location__burger-item">
+              <a class="actions-location__burger-link" href="#"><div class="actions-location__burger-picture">
+                <img class="actions-location__burger-image" src="assets/img/actions-location__burger-image1.svg" alt="#">
+              </div>
+              <div class="actions-location__burger-text">Киев</div></a>
             </li>
           </ul>
 

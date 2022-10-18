@@ -6,10 +6,25 @@
 
     display: grid;
     grid-template-columns: auto 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+    grid-template-areas: "logo nav act";
+        gap: 20px 60px;
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
 
-    &__logo {}
+    @include xl {
+        grid-template-columns: auto 1fr;
+        grid-template-areas: "logo nav"
+        "logo act";
+        align-items: center;
+    }
+
+    @include 
+    
+    &__logo {
+
+        grid-area: logo;
+    }
 
     &__link {}
 
@@ -18,10 +33,11 @@
 }
 
 .header-nav {
-
+grid-area: nav;
 
     &__list {
         display: flex;
+        justify-content: center;
         gap: 20px;
     }
 
@@ -32,6 +48,9 @@
         justify-content: space-between;
         gap: 8px;
         min-width: 100px;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
 
     }
 
@@ -39,16 +58,27 @@
 
     &__image {}
 
+    &__text {
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+    }
 }
 
 .actions {
+    grid-area: act;
     display: flex;
     gap: 40px;
     justify-content: space-between;
+    @include xl {
+        justify-content: center;
+    }
 
     &-location {
         display: flex;
+       
         gap: 8px;
+        position: relative;
 
 
         &__picture {}
@@ -62,7 +92,11 @@
     }
 
     &-tel {
-        &__link {}
+        &__link {
+            font-size: 16px;
+            line-height: 26px;
+            color: #00093C;
+        }
     }
 
     &-enter {
@@ -76,7 +110,11 @@
 
         &__image {}
 
-        &__text {}
+        &__text {
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+        }
     }
 }
 
@@ -119,12 +157,12 @@
         opacity: 1;
         // border-radius: 9px;
         border-radius: 3px;
-        background: #7C6AFA;
+        background: black;
 
         // можно поменять цвета
         &:nth-child(1) {
             top: 0;
-            // background: #a4a14a;
+            background: white;
         }
 
         &:nth-child(2) {
@@ -136,7 +174,7 @@
         &:nth-child(3) {
             // top: 36px;
             top: 18px;
-            // background: #ff6336;
+            background: white;
         }
     }
 
@@ -163,8 +201,41 @@
 
 .actions-location__burger {
     display: none;
+    position: absolute;
+    top: 150%;
+    width: 226px;
+    height: 190px;
+    background: #F6F7F9;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
 }
 
-.actions-location__burger-item {}
+.actions-location__burger-item {
+    margin-bottom: 20px;
+}
 
-.actions-location__burger-link {}
+.actions-location__burger-link {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    /* Gray 1 */
+    color: #333333;
+    gap: 10px;
+}
+
+.actions-location__text {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    text-decoration-line: underline;
+
+}
