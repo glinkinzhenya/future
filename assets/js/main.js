@@ -6,7 +6,13 @@ $('.header-navbar__btn').click(function () {
 
 });
 
+$('.header-navbar__btn2').click(function () {
+  $(this).toggleClass('open');
+  // $('.navbar__list').toggleClass('open');
 
+  $('.header-nav__list, .header-grid__actions').stop(true, true).slideToggle(500);
+
+});
 
 // считали DOM элементы
 const headersList = document.querySelectorAll('.slider__header');
