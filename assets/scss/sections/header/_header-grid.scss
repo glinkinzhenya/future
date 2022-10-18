@@ -3,24 +3,28 @@
 
 
 .header-grid {
-position: relative;
+    position: relative;
     display: grid;
     grid-template-columns: auto 1fr 1fr;
     grid-template-areas: "logo nav act";
-        gap: 20px 60px;
-    
-    margin-top: 20px;
-    margin-bottom: 20px;
+    gap: 20px 60px;
+
+    padding-top: 20px;
+   padding-bottom: 20px;
 
     @include xl {
         grid-template-columns: auto 1fr;
         grid-template-areas: "logo nav"
-        "logo act";
+            "logo act";
         align-items: center;
     }
 
-    
-    
+    @include md {
+        background: #00093C;
+    }
+
+
+
     &__logo {
 
         grid-area: logo;
@@ -28,25 +32,30 @@ position: relative;
 
     &__link {}
 
-    &__image {}
+    &__image {
+        @include md{
+            display: none;
+        }
+    }
 
 }
 
 .header-nav {
-grid-area: nav;
+    grid-area: nav;
 
     &__list {
         display: flex;
         justify-content: center;
         gap: 20px;
-        @include md  {
+
+        @include md {
             display: none;
             position: absolute;
             background-color: red;
-          top: 100%;
-        left: 0;
+            top: 100%;
+            left: 0;
             right: 0;
-           
+
             height: 50vh;
         }
     }
@@ -80,25 +89,26 @@ grid-area: nav;
     display: flex;
     gap: 40px;
     justify-content: space-between;
+
     @include xl {
         justify-content: center;
     }
 
-                 @include md {
-                     display: none;
-                     position: absolute;
-                     z-index: 2;
-                     background-color: green;
-                     top: 100%;
-                     left: 0;
-                     right: 0;
-        
-                     height: 50vh;
-                 }
+    @include md {
+        display: none;
+        position: absolute;
+     
+        background-color: green;
+        top: 462%;
+            right: -20px;
+            left: -180px;
+
+        height: 50vh;
+    }
 
     &-location {
         display: flex;
-       
+
         gap: 8px;
         position: relative;
 
@@ -224,13 +234,17 @@ grid-area: nav;
 .actions-location__burger {
     display: none;
     position: absolute;
-    top: 150%;
+    top: 60%;
     width: 226px;
     height: 190px;
     background: #F6F7F9;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     padding: 20px;
+
+    @include md {
+            top: 122%;
+    }
 }
 
 .actions-location__burger-item {
@@ -307,6 +321,10 @@ grid-area: nav;
         // border-radius: 9px;
         border-radius: 3px;
         background: #7C6AFA;
+
+        @include md {
+            background: white;
+        }
 
         // можно поменять цвета
         &:nth-child(1) {

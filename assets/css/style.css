@@ -257,8 +257,8 @@ ul
 
     display: grid;
 
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     grid-template-columns: auto 1fr 1fr;
     grid-template-areas: 'logo nav act';
@@ -268,6 +268,7 @@ ul
 {
     grid-area: logo;
 }
+
 .header-nav
 {
     grid-area: nav;
@@ -436,7 +437,7 @@ ul
 .actions-location__burger
 {
     position: absolute;
-    top: 150%;
+    top: 60%;
 
     display: none;
 
@@ -582,6 +583,14 @@ ul
 }
 @media (max-width: 767.8px)
 {
+    .header-grid
+    {
+        background: #00093c;
+    }
+    .header-grid__image
+    {
+        display: none;
+    }
     .header-nav__list
     {
         position: absolute;
@@ -598,15 +607,22 @@ ul
     .actions
     {
         position: absolute;
-        z-index: 2;
-        top: 100%;
-        right: 0;
-        left: 0;
+        top: 462%;
+        right: -20px;
+        left: -180px;
 
         display: none;
 
         height: 50vh;
 
         background-color: green;
+    }
+    .actions-location__burger
+    {
+        top: 122%;
+    }
+    .header-navbar__btn2 span
+    {
+        background: white;
     }
 }
